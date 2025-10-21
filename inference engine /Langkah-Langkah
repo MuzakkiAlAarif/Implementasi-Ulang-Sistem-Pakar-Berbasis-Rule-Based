@@ -1,0 +1,13 @@
+[Input Gejala User]
+↓
+[Cocokkan dengan Rules IF-THEN]
+↓
+[Hitung CF tiap gejala → (MB - MD)]
+↓
+[Kombinasi User × Pakar → CFfinal]
+↓
+[Gabung antar-gejala → CFcombine]
+↓
+[Pilih CF tertinggi → Diagnosis Akhir]
+↓
+[Tampilkan Hasil & Saran]
