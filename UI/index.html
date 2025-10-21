@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistem Pakar Penyakit Ginjal</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>🧬 Sistem Pakar Diagnosa Penyakit Ginjal</h1>
+    <p class="lead">Pilih gejala yang kamu rasakan → Tentukan tingkat keyakinan → Klik Diagnosa!</p>
+  </header>
+
+  <h1>Sistem Pakar Diagnosa Penyakit Ginjal</h1>
+  <div class="container">
+    <div class="card glass">
+      <h2>📋 Daftar Gejala</h2>
+      <div id="symList" class="sym-list"></div>
+      <div class="button-group">
+        <button id="selectAll" class="btn rotor">Pilih Semua</button>
+        <button id="clearAll" class="btn danger">Bersihkan</button>
+        <button id="diagnose" class="btn primary">🚀 Diagnosa</button>
+      </div>
+    </div>
+          <div class="confidence-options" id="conf_G1" style="display:none;">
+            <label> Tingkat Keyakinan:
+              <select name="opt_G1">
+                <option value="0.2">0.2 - Tidak yakin</option>
+                <option value="0.4">0.4 - Sedikit yakin</option>
+                <option value="0.6">0.6 - Cukup yakin</option>
+                <option value="0.8">0.8 - Yakin</option>
+                <option value="1.0" selected>1.0 - Sangat yakin</option>
+              </select>
+            </label>
+          </div>
+        </div>
+      </div>
+    <div class="card result-card pop">
+      <h3><span class="icon">📊</span> Hasil Diagnosa</h3>
+      <div id="output" class="result small">Belum ada diagnosa.</div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
