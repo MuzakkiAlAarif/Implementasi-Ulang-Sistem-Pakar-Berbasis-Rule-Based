@@ -1,3 +1,27 @@
+Penjelasan Proses Inferensi (Forward Chaining + CF)
+
+Pada saat melakukan proses inferensi ada beberapa tahap yang harus dilalui pada kegiatan implementasi ulang system pakar ini:
+	Sistem menampilkan daftar gejala yang nantinya akan user pilih melalui UI yang ada.
+	User memilih gejala yang dialami, dan memberi nilai CF user pada pilihan yang ada di UI:
+	Tidak yakin → 0.2
+	Cukup yakin → 0.5
+	 Yakin → 0.8
+	Sangat yakin → 1.0
+
+	Setelah memilih gejala dan memberikan nilai CF, system akan melakukan pencocokan fakta dengan Rules berdasarkan aturan yang ada pada file json.
+	Kemudian system akan mencocokkan gejala user dengan kondisi IF di setiap aturan.
+	Jika semua atau sebagian gejala cocok, aturan tersebut aktif (fired)
+	Perhitungan Nilai Certainty Factor :
+	Hitung CF pakar:
+CF_pakar=MB-MD
+ Hitung CF kombinasi (user × pakar):
+CF_kombinasi=CF_pakar×CF_user
+Gabungkan semua CF gejala untuk penyakit yang sama:
+CF_combine=CF_1+CF_2 (1-CF_1 )
+
+	Sistem memilih penyakit dengan nilai CF tertinggi sebagai hasil diagnosis.
+	Secara Garis besar dapat di simpulkan seperti ini:
+
 [Input Gejala User]
 ↓
 [Cocokkan dengan Rules IF-THEN]
